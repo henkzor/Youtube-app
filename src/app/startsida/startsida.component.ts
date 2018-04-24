@@ -8,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class StartsidaComponent implements OnInit {
 
 	WelcomePageTitle = "YouTube-Angular";
+	
+	clickMessage = "";
+	
+	VideoButtonClick()
+	{
+		this.clickMessage = "Knappen för video intryckt";
+			
+	}
 
   constructor() { }
 
