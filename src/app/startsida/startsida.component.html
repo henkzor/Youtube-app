@@ -10,18 +10,22 @@
 	<div class = "LoginRight-Klass">
 
 		<div class = "LoginRuta-Klass">
-
-			<h2>Login</h2>
-
-			<div> 
 			
-				<input placeholder = "Username"><br>
-				<input type = "password" placeholder = "Password">
-			
-			</div>	
-			
-			<button >Login!</button>
+			<form (submit)= "LoginFunction($event)">
+				
+				<h2>Login</h2>
 
+				<div >
+						
+					<input type = "text" placeholder = "Username"><br>
+					<input type = "password" placeholder = "Password">
+				
+				</div>	
+				
+				<button type = "submit">Login!</button>
+
+			</form>	
+				
 		</div>
 
 
@@ -55,18 +59,21 @@
 
 		</div>
 
-		<div class = "PageSelection-Klass">
+		
+		<app-navigationbar></app-navigationbar>
+		
+		<!--<div class = "PageSelection-Klass">
 
 		
-			<button id = "VideoPageButton" (click)="VideoButtonClick()"> Video page </button>
-			<button> Users page </button>
-			<button> Settings page </button>
+			<button id = "videosida" (click)="RouteButtonClick($event)"> Video page </button>
+			<button id = "usersida" (click)="RouteButtonClick($event)"> Users page </button>
+			<button id = "settingsida" (click)="RouteButtonClick($event)"> Settings page </button>
 			
 			<br><br>{{clickMessage}}
 
 
 
-		</div>
+		</div>-->
 		
 	</div>
 	

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-startsida',
@@ -9,17 +10,29 @@ export class StartsidaComponent implements OnInit {
 
 	WelcomePageTitle = "YouTube-Angular";
 	
-	clickMessage = "";
+
 	
-	VideoButtonClick()
+	LoginFunction(e)
 	{
-		this.clickMessage = "Knappen för video intryckt";
+		var Username = e.target.elements[0].value;
+		var Password= e.target.elements[1].value;
+		console.log (Username, Password);
+		
+		if (Username == "Henrik" && Password == "Henrik")
+		{
 			
+			this.router.navigate(["videosida"]);
+			
+		}
+		
+		
+		return false;
 	}
+	
 
-  constructor() { }
+  constructor(private router:Router) { }
 
-  ngOnInit() {
+  ngOnInit() {	
   }
 
 }

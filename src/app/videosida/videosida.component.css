@@ -1,23 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-
-.Left
-{
-	width: 49%;
-	float: left;
-		
-}
-
-
-.Right
-{
-	width: 49%;
-	float: right;
-	
-	
-}
-
-
-.Main
+.VideoPage-Klass
 {
 	border: 1px solid #333;
     box-shadow: 8px 8px 5px #444;
@@ -32,6 +13,26 @@
     width: 65%;
 	height: 500px; 
 	
+	
+	
+}
+
+
+
+
+
+.VideoLeft-Klass
+{
+	width: 69%;
+	float: left;
+		
+}
+
+
+.VideoRight-Klass
+{
+	width: 29%;
+	float: right;
 	
 	
 }
