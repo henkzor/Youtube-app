@@ -9,6 +9,9 @@ import { VideosidaComponent } from './videosida/videosida.component';
 import { UsersidaComponent } from './usersida/usersida.component';
 import { SettingsidaComponent } from './settingsida/settingsida.component';
 import { NavigationbarComponent } from './navigationbar/navigationbar.component';
+import { BackgroundComponent } from './background/background.component';
+
+import { LoginService } from "./login.service"
 
 const appRoutes: Routes = 
 [
@@ -38,13 +41,14 @@ const appRoutes: Routes =
     VideosidaComponent,
     UsersidaComponent,
     SettingsidaComponent,
-    NavigationbarComponent
+    NavigationbarComponent,
+    BackgroundComponent
   ],
   imports: [
 	RouterModule.forRoot(appRoutes),
     BrowserModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from "../login.service";
 
 @Component({
   selector: 'app-usersida',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersidaComponent implements OnInit {
 
-  constructor() { }
+	constructor(private login: LoginService) { }
+
+	UserPageTitle = "User Page"
+
+
 
   ngOnInit() {
   }

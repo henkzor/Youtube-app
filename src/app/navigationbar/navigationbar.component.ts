@@ -16,7 +16,7 @@ export class NavigationbarComponent implements OnInit {
 	{	
 	
 	
-		this.clickMessage = "Knappen för routing intryckt";
+		//this.clickMessage = "Knappen för routing intryckt";
 		
 		var ButtonID = e.target.attributes.id.nodeValue;
 		console.log(ButtonID);

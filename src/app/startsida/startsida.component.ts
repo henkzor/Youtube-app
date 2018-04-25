@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { LoginService } from "../login.service";
 
 @Component({
   selector: 'app-startsida',
@@ -8,7 +9,10 @@ import { Router } from "@angular/router";
 })
 export class StartsidaComponent implements OnInit {
 
-	WelcomePageTitle = "YouTube-Angular";
+	constructor(private router:Router, private login:LoginService ) { }
+
+
+	WelcomePageTitle = "Welcome to YouTube, but in Angular!";
 	
 
 	
@@ -20,7 +24,7 @@ export class StartsidaComponent implements OnInit {
 		
 		if (Username == "Henrik" && Password == "Henrik")
 		{
-			
+			this.login.setUserLoggedIn();
 			this.router.navigate(["videosida"]);
 			
 		}
@@ -30,7 +34,7 @@ export class StartsidaComponent implements OnInit {
 	}
 	
 
-  constructor(private router:Router) { }
+ 
 
   ngOnInit() {	
   }
