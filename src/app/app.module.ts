@@ -12,6 +12,8 @@ import { NavigationbarComponent } from './navigationbar/navigationbar.component'
 import { BackgroundComponent } from './background/background.component';
 
 import { LoginService } from "./login.service"
+import { AuthenticationGuard } from "./authentication.guard";
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
 
 const appRoutes: Routes = 
 [
@@ -22,13 +24,18 @@ const appRoutes: Routes =
 	component: VideosidaComponent},
 	
 	{path: "usersida",
+	canActivate: [AuthenticationGuard],
 	component: UsersidaComponent},
 	
 	{path: "settingsida",
 	component: SettingsidaComponent},
 	
 	{path: "startsida",
-	component: StartsidaComponent}
+	component: StartsidaComponent},
+	
+	{ path: '**', 
+	component: PagenotfoundComponent }
+	
 
 ]
 
@@ -42,13 +49,14 @@ const appRoutes: Routes =
     UsersidaComponent,
     SettingsidaComponent,
     NavigationbarComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    PagenotfoundComponent
   ],
   imports: [
 	RouterModule.forRoot(appRoutes),
     BrowserModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, AuthenticationGuard, VideosidaComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

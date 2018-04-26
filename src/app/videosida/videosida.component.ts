@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, Response } from "@angular/http";
 
 @Component({
   selector: 'app-videosida',
@@ -10,7 +11,7 @@ export class VideosidaComponent implements OnInit {
 
 	VideoPageTitle = "Video Page";
 
-
+	//AIzaSyBUB9Aew-KOxBbqhCFS1HYnwoEN-oGP43U
   constructor() { }
 
   ngOnInit() {

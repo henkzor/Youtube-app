@@ -25,7 +25,7 @@ export class StartsidaComponent implements OnInit {
 		if (Username == "Henrik" && Password == "Henrik")
 		{
 			this.login.setUserLoggedIn();
-			this.router.navigate(["videosida"]);
+			this.router.navigate(["usersida"]);
 			
 		}
 		
