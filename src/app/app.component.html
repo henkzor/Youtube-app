@@ -1,5 +1,11 @@
 
+<h1>YouTube Search</h1>
 
-	<app-background></app-background>
+<input [formControl]="search">
+
+<div *ngFor = "let video of results | async">
+	<h3>{{video.snippet.title}}</h3>
+</div>
+	<!--<app-background></app-background>-->
 	
 

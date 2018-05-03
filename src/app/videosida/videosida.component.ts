@@ -6,18 +6,19 @@ import { Http, Response } from "@angular/http";
   templateUrl: './videosida.component.html',
   styleUrls: ['./videosida.component.css']
 })
-export class VideosidaComponent /*implements OnInit*/ {
+export class VideosidaComponent implements OnInit {
 
 
 	
 	  
 	//AIzaSyBUB9Aew-KOxBbqhCFS1HYnwoEN-oGP43U
-	/*constructor() { }
+	constructor() { }
 
-	ngOnInit() {}
-*/
+	ngOnInit() {
+	}
+
 	VideoPageTitle = "Video Page";
-	
+	/*
 	
 	var tag = document.createElement('script');
 
@@ -57,6 +58,6 @@ export class VideosidaComponent /*implements OnInit*/ {
       }
       function stopVideo() {
         player.stopVideo();
-      }
+      }*/
 
 }
